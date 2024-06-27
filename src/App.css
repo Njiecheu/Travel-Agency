@@ -8,8 +8,7 @@
   transition: .3s ease;
 }
 body{
-  /* background: var(--White-color); */
-  background: green;
+  background: var(--White-color);
 }
 
 /*colors*/
