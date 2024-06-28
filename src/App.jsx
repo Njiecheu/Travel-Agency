@@ -17,8 +17,8 @@ function App() {
       <Popular/>
       <Offers/>
       <About/>
-      {/* <Blog/>
-      <Footer/> */}
+      <Blog/>
+      <Footer/>
     </>
   )
 }

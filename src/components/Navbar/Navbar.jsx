@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className={transparent}>
         <div className="logoDiv">
             <a href="#" className="logo">
-                <h1 className='flex'><MdOutlineModeOfTravel className='icon'/></h1>
+                <h1 className='flex'><MdOutlineModeOfTravel className='icon'/>Travel</h1>
             </a>
         </div>
         <div className={active}>

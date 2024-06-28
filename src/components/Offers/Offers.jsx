@@ -7,6 +7,8 @@ import {
   MdKingBed,
   MdLocationOn,
 } from "react-icons/md";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 import "./offers.scss";
 
@@ -15,6 +17,7 @@ import img from "../../assets/chute.jpg";
 import img1 from "../../assets/doul.jpeg";
 import img2 from "../../assets/sport.jpeg";
 import img3 from "../../assets/kribi.jpg";
+import { useEffect } from "react";
 
 const offer = [
   {
@@ -47,10 +50,14 @@ const offer = [
   }
 ];
 const Offers = () => {
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+  },[])
+
   return (
     <section className="offer container section">
       <div className="secContainer">
-        <div className="secIntro">
+        <div data-aos='fade-up' data-aos-duration='2000' className="secIntro">
           <h2 className="secTitle">Special Offers</h2>
           <p>
             From historical cities to natural spectaculars, come see the bes of
@@ -60,7 +67,7 @@ const Offers = () => {
         <div className="mainContent grid">
           {offer.map(({id,imgSrc,destTitle,location,price}) => {
             return (
-              <div key={id} className="singleOffer">
+              <div key={id} data-aos='fade-up' data-aos-duration='3000' className="singleOffer">
                 <div className="destImage">
                   <img src={imgSrc} alt={destTitle} />
                   <span className="discount">30% Off</span>

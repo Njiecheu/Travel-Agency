@@ -1,5 +1,7 @@
 // import React from 'react'
 import { BsArrowLeftShort, BsArrowRightShort, BsDot } from "react-icons/bs";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import "./popular.scss";
 
 //import the images
@@ -9,6 +11,7 @@ import img3 from "../../assets/img3.jpeg";
 import img4 from "../../assets/img4.jpeg";
 import img5 from "../../assets/img5.jpg";
 import img6 from "../../assets/img6.jpg";
+import { useEffect } from "react";
 
 const Data = [
   {
@@ -49,18 +52,22 @@ const Data = [
 ];
 
 const Popular = () => {
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+  },[])
+
   return (
     <section className="popular section container">
       <div className="secContainer">
         <div className="secHeader flex">
-          <div className="textDiv">
+          <div data-aos='fade-right' data-aos-duration='2500' className="textDiv">
             <h2 className="secTitle">Popular Destination</h2>
             <p>
               From historical cities to natural spectaculars, come see the bes
               of the world!
             </p>
           </div>
-          <div className="iconsDiv flex">
+          <div data-aos='fade-left' data-aos-duration='2500' className="iconsDiv flex">
             <BsArrowLeftShort className="leftIcon icon" />
             <BsArrowRightShort className="rightIcon icon" />
           </div>
@@ -68,7 +75,7 @@ const Popular = () => {
         <div className="mainContent grid">
           {Data.map(({id,imgSrc,destTitle,location,grade}) => {
             return (
-              <div key={id} className="singleDestination">
+              <div key={id} data-aos='fade-up' className="singleDestination">
                 <div className="destImage">
                   <img src={imgSrc} alt="Image title" />
                   <div className="overlayInfo">
