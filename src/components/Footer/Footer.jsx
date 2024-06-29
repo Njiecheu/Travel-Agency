@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import './footer.scss';
-import { BsInstagram, BsX } from "react-icons/bs";
+import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { ImFacebook } from "react-icons/im";
 import { MdOutlineModeOfTravel } from "react-icons/md";
 import Aos from 'aos'
@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
           <div data-aos='fade-up' data-aos-duration='3000' className="socials flex">
             <ImFacebook className="icon" />
-            <BsX className="icon" />
+            <BsWhatsapp className="icon" />
             <BsInstagram className="icon" />
           </div>
         </div>

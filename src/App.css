@@ -90,7 +90,13 @@ img, video{
 /*ends*/
 
 /*responsive*/
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 430px) {
+  .mainContent, .singlePost{
+    grid-template-columns: repeat(1,1fr) !important;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 8400px) {
   .mainContent, .singlePost{
     grid-template-columns: repeat(2,1fr) !important;
   }

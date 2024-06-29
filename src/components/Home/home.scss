@@ -59,7 +59,7 @@
       bottom: -35%;
       transform: translate(-50%);
       left: 50%;
-      box-shadow: 0 2px 4px 8px rgba(17%,17%,17%,0.45);
+      box-shadow: 0 2px 4px 8px rgba(114, 112, 112, 0.11);
 
       .locationDiv, .distDiv, .priceDiv{
         width: 100%;
@@ -74,6 +74,7 @@
         input{
           width: 100%;
           background: var(--inputColor);
+          color: var(--text-color);
           border-radius: 10px;
           border: none;
           padding: 10px;
